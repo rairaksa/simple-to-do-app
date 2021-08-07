@@ -1,6 +1,5 @@
 import Header from './Header.js' 
 import ToDoForm from './ToDoForm.js'
-import ToDoList from './ToDoList.js'
 import Footer from './Footer.js'
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
         <div className="w-1/3 mx-auto flex flex-col gap-4">
           <Header />
           <ToDoForm />
-          <ToDoList />
           <Footer />
         </div>
       </div>
