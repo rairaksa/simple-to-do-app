@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header.js' 
+import ToDoForm from './ToDoForm.js'
+import ToDoList from './ToDoList.js'
+import Footer from './Footer.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-gray-800 relative w-full min-h-screen pt-20">
+      <div className="absolute left-0 top-0 w-full h-72 bg-gradient-to-br from-blue-400 to-blue-600 via-blue-500 z-0">
+      </div>
+      <div className="absolute top-0 w-full h-auto pt-16">
+        <div className="w-1/3 mx-auto flex flex-col gap-4">
+          <Header />
+          <ToDoForm />
+          <ToDoList />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
