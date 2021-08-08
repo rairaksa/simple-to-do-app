@@ -9,16 +9,33 @@ function ToDoList(props) {
     }
 
     const handleChange = (id) => {
+        const newTodos = todos.map(todo => {
+            if(todo.id === id) {
+                return {
+                    ... todo,
+                    isComplete: todo.id === id
+                };
+            }
+            else {
+                return {
+                    ... todo
+                }
+            }
+        });
+
+        console.log(newTodos);
+
+        setTodos(newTodos);
     }
 
     const handleFilter = (name) => {
-        if(name == "all") {
+        if(name === "all") {
             
         }
-        else if(name == "active") {
+        else if(name === "active") {
 
         }
-        else if(name == "complete") {
+        else if(name === "complete") {
             
         }
     }
@@ -34,8 +51,8 @@ function ToDoList(props) {
                 {
                     todos.map((todo) => (
                         <li className="flex flex-row py-2 m-0 gap-4 items-center" key={todo.id}>
-                            <input type="checkbox" class="flex-shrink focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" onChange={() => handleChange(todo.id)}/>
-                            <p className="flex-grow p-0 text-gray-800 { todo.isComplete == true ? 'line-through' : '' }">{todo.title}</p>
+                            <input type="checkbox" class="flex-shrink focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" checked={todo.isComplete ? 'checked' : null} onChange={() => handleChange(todo.id)}/>
+                            <p className={"flex-grow p-0 text-gray-800 "+ (todo.isComplete ? 'line-through' : null ) }>{todo.title}</p>
                             <button className="bg-red-600 hover:bg-red-800 p-2 rounded-md text-white" onClick={() => handleDelete(todo.id)}>
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
