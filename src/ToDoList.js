@@ -18,9 +18,13 @@ function ToDoList(props) {
     const handleChange = (id) => {
         const newTodos = todos.map(todo => {
             if(todo.id === id) {
+                let state = false;
+                if(!todo.isComplete) {
+                    state = true;
+                }
                 return {
                     ... todo,
-                    isComplete: todo.id === id
+                    isComplete: state
                 };
             }
             else {
