@@ -97,7 +97,7 @@ function ToDoList(props) {
                     <button className={"rounded-md " + (filter === 'active' ? 'bg-blue-600 text-gray-100' : "bg-transparent text-gray-600" ) + " hover:bg-blue-800 hover:text-gray-100 py-1 px-2"} onClick={() => handleFilter('active')}>Active</button>
                     <button className={"rounded-md " + (filter === 'complete' ? 'bg-blue-600 text-gray-100' : "bg-transparent text-gray-600" ) + " hover:bg-blue-800 hover:text-gray-100 py-1 px-2"} onClick={() => handleFilter('complete')}>Complete</button>
                 </div>
-                <a className="order-2 lg:order-3 text-sm text-gray-600 font-light tracking-wider" href="#" onClick={() => handleClearComplete() }>Clear Completed</a>
+                <a className="order-2 lg:order-3 text-sm text-gray-600 font-light tracking-wider rounded-md py-1 px-2 hover:bg-red-800 hover:text-white" href="#" onClick={() => handleClearComplete() }>Clear Completed</a>
             </div>
         </div>
     )
