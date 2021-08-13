@@ -32,6 +32,8 @@ function ToDoForm() {
             isComplete:false,
             title:inputText
         }]);
+        
+        setInputText('');
     }
 
     // lists
