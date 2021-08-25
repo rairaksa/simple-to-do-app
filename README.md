@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-See demo [here](https://raydeon7.github.io/simple-to-do-app/).
+See demo [here](https://rairaksa.github.io/simple-to-do-app/).
 
 ## Technology that used by project
 
